@@ -39,14 +39,17 @@
     },
     methods: {
         iniciar() {
-            this.cronometroRodando = true
+            this.cronometroRodando = true;
             this.cronometro = setInterval(() => {
                 this.tempoEmSegundos += 1;
             }, 1000);
         },
         finalizar() {
-            this.cronometroRodando = false
+            this.cronometroRodando = false;
             clearInterval(this.cronometro);
+            this.$emit('aoTemporizadorFinalizado', this.tempoEmSegundos)
+            this.tempoEmSegundos = 0;
+
         }
     }
     })

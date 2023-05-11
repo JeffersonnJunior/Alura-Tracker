@@ -4,9 +4,11 @@
             <div class="column is-8" role="form" aria-label="Formulário para criação de uma nova tarefa">
                 <input type="text" 
                 class="input" 
-                placeholder="Qual tarefa você deseja iniciar?">
+                placeholder="Qual tarefa você deseja iniciar?"
+                v-model="descricao"
+                >
             </div>
-        <Temporizador/>
+        <Temporizador @aoTemporizadorFinalizado="finalizarTarefa"/>
         </div>
     </div>
 </template>
@@ -20,5 +22,16 @@
     components:{
         Temporizador
     },
+    data (){
+        return{
+            descricao: ''
+        }
+    },
+    methods: {
+        finalizarTarefa(tempoDecorrido: number): void{
+            console.log(`Tempo da tarefa ${tempoDecorrido}, tarafa ${this.descricao}`);
+            this.descricao = '';
+    }
+},
 });
 </script>
