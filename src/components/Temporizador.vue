@@ -35,8 +35,6 @@
     },
     methods: {
       iniciar () {
-        // começar a contagem
-        // 1 seg = 1000 ms
         this.cronometroRodando = true
         this.cronometro = setInterval(() => {
           this.tempoEmSegundos += 1        
