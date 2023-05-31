@@ -17,30 +17,15 @@
             <button class="button" type="submit">Salvar</button>
         </div>
     </form>
-    <table class="table is-fullwidth">
-        <thead>
-            <tr>
-                <td>ID</td>
-                <td>Nome</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="projeto in projetos" :key="projeto.id">
-                <th>{{ projeto.id }}</th>
-                <th>{{ projeto.nome }}</th>
-            </tr>
-        </tbody>
-    </table>
 </template>
 
 <script lang="ts">
-import { computed } from '@vue/reactivity';
 import { defineComponent } from 'vue';
 import { useStore } from '@/store';
 
 
 export default defineComponent({
-    name: 'Projetos-Formulario',
+    name: 'Projeto-Formulario',
     data(){
        return{
         nomeDoProjeto: "",
@@ -49,15 +34,15 @@ export default defineComponent({
     methods:{
         salvar(){
             this.store.commit('ADICIONA_PROJETO', this.nomeDoProjeto)
-            this.nomeDoProjeto = ""; 
+            this.nomeDoProjeto = "";
+            this.$router.push('/projetos')
         },
         
     },
     setup(){
       const store = useStore()
       return{
-        store,
-        projetos: computed(() => store.state.projetos)
+        store
       }
     }
 
