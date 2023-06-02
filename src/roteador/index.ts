@@ -3,6 +3,7 @@ import Tarefas from '../views/Tarefas.vue'
 import Projetos from '../views/Projetos.vue'
 import Formulario from '../views/projetos/Formulario.vue'
 
+
 const rotas: RouteRecordRaw[] = [
     {
     path: '/',
@@ -25,7 +26,8 @@ const rotas: RouteRecordRaw[] = [
     {
     path: '/projetos/:id',
     name: 'Editar projetos',
-    component: Formulario
+    component: Formulario,
+    props: true
     },
 
 ]

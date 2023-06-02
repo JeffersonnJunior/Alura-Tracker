@@ -18,7 +18,7 @@
         </div>
     </form>
 </template>
-
+<!--teste-->
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { useStore } from '@/store';
@@ -26,6 +26,11 @@ import { useStore } from '@/store';
 
 export default defineComponent({
     name: 'Projeto-Formulario',
+    props: {
+        id:{
+            type: String
+        }
+    },
     data(){
        return{
         nomeDoProjeto: "",
