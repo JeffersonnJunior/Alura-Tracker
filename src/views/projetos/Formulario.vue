@@ -1,6 +1,5 @@
 <template>
-    <section class="projetos"></section>
-    <h1>Projetos</h1>
+    <section>
     <form @submit.prevent="salvar">
         <div class="field">
             <label for="nomeDoProjeto" class="label">
@@ -17,8 +16,7 @@
             <button class="button" type="submit">Salvar</button>
         </div>
     </form>
-    
-    
+    </section>
 </template>
 
 <script lang="ts">
@@ -73,9 +71,3 @@ export default defineComponent({
 });
 
 </script>
-
-<style scoped>
-.projetos {
-    padding: 1.25rem;
-}
-</style>

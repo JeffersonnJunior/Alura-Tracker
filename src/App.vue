@@ -5,7 +5,6 @@
     </div>
     <div class="column is-three-quarter conteudo">
       <router-view></router-view>
-      
     </div>
   </main>
 </template>
