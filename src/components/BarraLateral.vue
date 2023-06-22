@@ -52,7 +52,7 @@
     }
   })
   </script>
-  
+
   <style scoped>
   header {
     padding: 1rem;
