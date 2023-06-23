@@ -19,6 +19,7 @@
                   <i class="fas fa-project-diagram"></i>
                   projetos
                 </RouterLink>
+              <h1>Teste</h1>
               </li>
             </ul>
         </nav>
