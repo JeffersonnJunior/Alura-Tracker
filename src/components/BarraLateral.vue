@@ -23,7 +23,6 @@
             </ul>
         </nav>
     </header>
-    <H1>teste</H1>
   </template>
 
   <script lang="ts">
